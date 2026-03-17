@@ -1,30 +1,31 @@
  <h1>🍕 Pizzahut_SQL</h1>
+<h1 align="center">🍕 Pizzahut_SQL</h1>
 
-    <p>
-        This project is a hands-on SQL practice system designed to simulate a real-world 
-        E-Commerce database. It helps developers strengthen their SQL skills by working 
-        with structured data, relationships, and practical business queries.
-    </p>
+<p align="center">
+This project is a hands-on SQL practice system designed to simulate a real-world 
+E-Commerce database. It helps developers strengthen their SQL skills by working 
+with structured data, relationships, and practical business queries.
+</p>
 
-    <hr>
+---
 
-    <h2>📌 Database Setup</h2>
+## 📌 Database Setup
 
-    <h3>1. Create Database</h3>
-    <pre><code>
+### 1. Create Database
+```sql
 CREATE DATABASE pizzahut;
 USE pizzahut;
-    </code></pre>
+```
 
-    <h3>2. Import Existing Tables</h3>
-    <pre><code>
+### 2. Import Existing Tables
+```sql
 SELECT * FROM pizzahut.pizzas;
 SELECT * FROM pizzas;
 SELECT * FROM pizzahut.pizza_types;
-    </code></pre>
+```
 
-    <h3>3. Create Orders Table</h3>
-    <pre><code>
+### 3. Create Orders Table
+```sql
 CREATE TABLE orders(
     order_id INT NOT NULL,
     order_date DATE NOT NULL,
@@ -33,10 +34,10 @@ CREATE TABLE orders(
 );
 
 SELECT * FROM orders;
-    </code></pre>
+```
 
-    <h3>Create Order Details Table</h3>
-    <pre><code>
+### 4. Create Order Details Table
+```sql
 CREATE TABLE order_details(
     order_details_id INT NOT NULL,
     order_id INT NOT NULL,
@@ -46,28 +47,28 @@ CREATE TABLE order_details(
 );
 
 SELECT * FROM order_details;
-    </code></pre>
+```
 
-    <hr>
+---
 
-    <h2>🧪 Assignments & Queries</h2>
+## 🧪 Assignments & Queries
 
-    <h3>1. Retrieve Total Number of Orders</h3>
-    <pre><code>
+### 1. Retrieve Total Number of Orders
+```sql
 SELECT COUNT(order_id) AS total_order FROM orders;
 -- Answer: 21350
-    </code></pre>
+```
 
-    <h3>2. Calculate Total Revenue</h3>
-    <pre><code>
+### 2. Calculate Total Revenue
+```sql
 SELECT
 ROUND(SUM(order_details.quantity * pizzas.price), 2) AS total_sales
 FROM order_details
 JOIN pizzas ON pizzas.pizza_id = order_details.pizza_id;
-    </code></pre>
+```
 
-    <h3>3. Maximum Price of Pizza</h3>
-    <pre><code>
+### 3. Maximum Price of Pizza
+```sql
 SELECT MAX(price) AS max_price_of_pizza FROM pizzas;
 
 -- OR
@@ -78,12 +79,17 @@ FROM pizza_types
 JOIN pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
 ORDER BY pizzas.price DESC
 LIMIT 1;
-    </code></pre>
+```
 
-    <hr>
+---
 
-    <h2>🚀 Conclusion</h2>
-    <p>
-        This project provides a practical environment to learn and master SQL concepts 
-        including joins, aggregations, and real-world data analysis.
-    </p>
+## 🚀 Conclusion
+This project provides a practical environment to learn and master SQL concepts including:
+- Joins  
+- Aggregations  
+- Real-world data analysis  
+
+---
+
+## ⭐ Author
+**Apurava Anand**
