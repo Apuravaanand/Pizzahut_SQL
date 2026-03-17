@@ -1,5 +1,4 @@
- <h1>🍕 Pizzahut_SQL</h1>
-<!-- <h1 align="center">🍕 Pizzahut_SQL</h1> -->
+<h1 align="center">🍕 Pizzahut_SQL</h1>
 
 <p align="center">
 This project is a hands-on SQL practice system designed to simulate a real-world 
