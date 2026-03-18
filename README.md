@@ -80,9 +80,9 @@ ORDER BY pizzas.price DESC
 LIMIT 1;
 ```
 
-### 4. Create a table that show most commonly quantity order more 
+### 4. Create a table that show most commonly quantity ordered
 ```sql
-select 
+select
 quantity, count(order_details_id)
 from order_details group by (quantity);
 ```
