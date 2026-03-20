@@ -99,10 +99,11 @@ group by pizzas.size;
 ### 6. List the top 5 most pizzas type ordered along ordered quantity
 ```sql
 select 
-pizzas.size, count(order_details.order_details_id)
+pizzas.pizza_id, count(order_details.quantity) as total_orders_quantity
 from pizzas join order_details
 on pizzas.pizza_id = order_details.pizza_id
-group by pizzas.size;
+group by pizzas.pizza_id
+order by total_orders_quantity desc limit 5;
 ```
 
 ---
