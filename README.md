@@ -106,6 +106,16 @@ group by pizzas.pizza_id
 order by total_orders_quantity desc limit 5;
 ```
 
+### 6. Join the table to find total quantity of each pizza category ordered.
+```sql
+select 
+pizzas.pizza_id, count(order_details.quantity) as total_orders_quantity
+from pizzas join order_details
+on pizzas.pizza_id = order_details.pizza_id
+group by pizzas.pizza_id
+order by total_orders_quantity desc limit 5;
+```
+
 ---
 
 ## 🚀 Conclusion
