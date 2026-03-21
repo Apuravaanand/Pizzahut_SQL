@@ -126,10 +126,10 @@ order by(hours);
 
 ### 9. Give the relevant table to find the category-wise distribution of pizzas
 ```sql
-select hour(order_time) as hours, count(order_id) as order_count
-from orders
-group by(hours)
-order by(hours);
+select
+category, count(name)
+from pizza_types
+group by category;
 ```
 
 ---
