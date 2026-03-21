@@ -132,15 +132,3 @@ from pizza_types
 group by category;
 ```
 
----
-
-## 🚀 Conclusion
-This project provides a practical environment to learn and master SQL concepts including:
-- Joins  
-- Aggregations  
-- Real-world data analysis  
-
----
-
-## ⭐ Author
-**Apurava Anand**
